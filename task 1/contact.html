@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!--
+  contact.html — Contact Page
+  Accessible contact form and contact details
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Contact — Alex Rivera | Full-Stack Developer & Designer</title>
+  <meta name="description" content="Get in touch with Alex Rivera for freelance, contract, or full-time opportunities." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container">
+      <a href="index.html" class="site-logo" aria-label="Alex Rivera — go to homepage">Alex Rivera</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open site navigation">☰ Menu</button>
+      <nav aria-label="Primary" id="primary-nav">
+        <ul class="primary-nav" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <div class="container">
+
+      <section class="hero" aria-labelledby="page-heading">
+        <span class="section-label" aria-hidden="true">Contact</span>
+        <h1 id="page-heading" class="hero-title">Let's <span class="accent">talk</span> about your project.</h1>
+        <p class="hero-description">Whether it's a short question or a long brief, I'm happy to hear about your idea. Typical response time: 1–2 business days.</p>
+      </section>
+
+      <section class="section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="section-title">Get in touch</h2>
+
+        <div class="contact-layout">
+
+          <!-- Contact Form -->
+          <form id="contact-form" class="contact-form" novalidate aria-labelledby="contact-heading">
+
+            <div id="form-status" aria-live="polite" class="form-hint">All fields marked with * are required.</div>
+
+            <div class="form-group">
+              <label for="name" class="form-label">Your name <span class="required-marker" aria-hidden="true">*</span></label>
+              <input id="name" name="name" class="form-input" type="text" required aria-required="true" aria-describedby="name-hint" />
+              <div id="name-hint" class="form-hint">Enter your full name.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email address <span class="required-marker" aria-hidden="true">*</span></label>
+              <input id="email" name="email" class="form-input" type="email" required aria-required="true" aria-describedby="email-hint" />
+              <div id="email-hint" class="form-hint">I'll only use this to reply to you.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input id="subject" name="subject" class="form-input" type="text" aria-describedby="subject-hint" />
+              <div id="subject-hint" class="form-hint">Short summary of your request (optional).</div>
+            </div>
+
+            <div class="form-group">
+              <label for="message" class="form-label">Message <span class="required-marker" aria-hidden="true">*</span></label>
+              <textarea id="message" name="message" class="form-textarea" required aria-required="true" aria-describedby="message-hint"></textarea>
+              <div id="message-hint" class="form-hint">Tell me about the project, timeline, and budget (as much as you can).</div>
+            </div>
+
+            <div>
+              <button type="submit" class="btn btn-primary">Send message</button>
+              <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+
+          </form>
+
+          <!-- Contact details / social -->
+          <aside aria-labelledby="details-heading">
+            <h3 id="details-heading" class="section-title">Other ways to reach me</h3>
+
+            <p class="form-hint">Prefer email or quick message? Use these links:</p>
+
+            <ul class="social-links" role="list">
+              <li class="social-link-item">
+                <a href="mailto:hello@alexrivera.dev" aria-label="Email Alex Rivera">📧 hello@alexrivera.dev</a>
+              </li>
+              <li class="social-link-item">
+                <a href="tel:+1234567890" aria-label="Call Alex Rivera">📞 +1 (234) 567‑890</a>
+              </li>
+              <li class="social-link-item">
+                <a href="https://github.com/alexrivera" target="_blank" rel="noopener noreferrer" aria-label="Alex's GitHub">🐙 GitHub <span class="visually-hidden">(opens in new tab)</span></a>
+              </li>
+              <li class="social-link-item">
+                <a href="https://www.linkedin.com/in/alexrivera" target="_blank" rel="noopener noreferrer" aria-label="Alex's LinkedIn">🔗 LinkedIn <span class="visually-hidden">(opens in new tab)</span></a>
+              </li>
+            </ul>
+
+            <div style="margin-top:var(--space-8);">
+              <h4 class="section-label" style="display:inline-block;">Availability</h4>
+              <p class="form-hint">Open to freelance, contract, and full-time roles. Remote-first, available for on-site visits in New York City by request.</p>
+            </div>
+          </aside>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p class="footer-copy"><small>© <time datetime="2025">2025</time> Alex Rivera. All rights reserved.</small></p>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-nav" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle (same pattern as other pages)
+    const toggle = document.querySelector('.nav-toggle');
+    const nav    = document.querySelector('#primary-nav .primary-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', () => {
+        const isOpen = nav.classList.toggle('is-open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        toggle.setAttribute('aria-label', isOpen ? 'Close site navigation' : 'Open site navigation');
+        if (isOpen) { const fl = nav.querySelector('a'); if (fl) fl.focus(); }
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && nav.classList.contains('is-open')) {
+          nav.classList.remove('is-open');
+          toggle.setAttribute('aria-expanded', 'false');
+          toggle.setAttribute('aria-label', 'Open site navigation');
+          toggle.focus();
+        }
+      });
+    }
+
+    // Simple client-side form handler: validate and simulate send
+    (function () {
+      const form = document.getElementById('contact-form');
+      const status = document.getElementById('form-status');
+
+      if (!form) return;
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Native constraint validation
+        if (!form.reportValidity()) {
+          status.textContent = 'Please complete the required fields.';
+          return;
+        }
+
+        // Gather values (could be sent to an API)
+        const data = new FormData(form);
+        const payload = {
+          name: data.get('name'),
+          email: data.get('email'),
+          subject: data.get('subject'),
+          message: data.get('message')
+        };
+
+        // Simulate send — in a real site, POST this to a server.
+        status.textContent = 'Sending message…';
+        // Small timeout to show feedback
+        setTimeout(() => {
+          status.textContent = 'Thanks — your message has been received. I typically reply within 1–2 business days.';
+          form.reset();
+        }, 700);
+      });
+    })();
+  </script>
+
+</body>
+</html>
