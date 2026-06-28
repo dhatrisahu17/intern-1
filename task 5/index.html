@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NovaStore — Neo Brutalist Commerce</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="location-box">
+          <label for="location">Deliver to</label>
+          <select id="location">
+            <option>New York</option>
+            <option>Chicago</option>
+            <option>Los Angeles</option>
+            <option>Seattle</option>
+          </select>
+        </div>
+
+        <div class="brand-block">
+          <div class="brand-mark">N</div>
+          <div>
+            <h1>NovaStore</h1>
+            <p>Made to move fast</p>
+          </div>
+        </div>
+
+        <div class="nav-actions">
+          <label class="search-bar" for="searchInput">
+            <span>🔎</span>
+            <input id="searchInput" type="search" placeholder="Search products" />
+          </label>
+          <button class="icon-btn" aria-label="Profile">👤</button>
+          <button class="icon-btn cart-btn" id="cartToggle" aria-label="Cart">
+            🛒<span id="cartCount">0</span>
+          </button>
+        </div>
+      </header>
+
+      <section class="category-strip" aria-label="Product categories">
+        <button class="category-pill active" data-category="all">All</button>
+        <button class="category-pill" data-category="tech">Tech</button>
+        <button class="category-pill" data-category="home">Home</button>
+        <button class="category-pill" data-category="fashion">Fashion</button>
+        <button class="category-pill" data-category="wellness">Wellness</button>
+      </section>
+
+      <main class="main-content">
+        <section class="hero-card">
+          <div>
+            <p class="eyebrow">Fresh drop</p>
+            <h2>Built for the bold, shipped in a day.</h2>
+            <p>Brutalist energy. Everyday essentials. Zero fluff.</p>
+          </div>
+          <button class="primary-btn">Shop now</button>
+        </section>
+
+        <section class="products-section">
+          <div class="section-heading">
+            <h3>Featured picks</h3>
+            <p>Only a handful of favorites, made to stand out.</p>
+          </div>
+          <div id="productGrid" class="product-grid"></div>
+        </section>
+      </main>
+
+      <aside id="cartDrawer" class="cart-drawer" aria-live="polite">
+        <div class="drawer-head">
+          <h3>Your cart</h3>
+          <button id="closeCart" class="icon-btn">✕</button>
+        </div>
+        <div id="cartItems" class="cart-items"></div>
+        <div class="drawer-footer">
+          <p id="cartTotal">Total: $0</p>
+          <button class="primary-btn full">Checkout</button>
+        </div>
+      </aside>
+      <div id="drawerOverlay" class="drawer-overlay"></div>
+
+      <footer class="site-footer">
+        <div class="footer-socials">
+          <a href="#">Instagram</a>
+          <a href="#">TikTok</a>
+          <a href="#">X</a>
+          <a href="#">Pinterest</a>
+        </div>
+
+        <div class="accordion-list">
+          <details open>
+            <summary>Shipping & returns</summary>
+            <p>Free shipping over $50 and easy 30-day returns.</p>
+          </details>
+          <details>
+            <summary>Care guide</summary>
+            <p>Most products are built to last with simple everyday care.</p>
+          </details>
+          <details>
+            <summary>Support</summary>
+            <p>Reach our support crew anytime for product questions.</p>
+          </details>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
